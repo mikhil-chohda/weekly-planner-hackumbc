@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weekly Calendar</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav class="navbar">
+       <div class="app-name">WeeklyPlanner</div>
+   </nav>
+
+   <div class="calendar-header">
+       <button class="nav-button" id="prev-week">◀️◀️</button>
+       <div class="view-options">
+           <button class="view-button" id="view-current-week">This Week</button>
+           <button class="view-button" id="view-next-week">Next Week</button>
+           <button class="view-button" id="view-month">Month View</button>
+       </div>
+       <h2 id="month-year"></h2>
+       <button class="nav-button" id="next-week">▶️▶️</button>
+   </div>
+
+   <div class="calendar-grid"></div>
+
+   <div class="add-event-container">
+       <button class="button" id="add-event-btn">Add Event</button>
+   </div>
+
+   <!-- Event Modal -->
+   <div id="event-modal" class="modal">
+       <div class="modal-content">
+           <h2>Add Event</h2>
+           <label for="event-title">Title:</label>
+           <input type="text" id="event-title" name="title" required>
+           
+           <label for="event-day">Day:</label>
+           <select id="event-day" name="day">
+               <option value="Sunday">Sunday</option>
+               <option value="Monday">Monday</option>
+               <option value="Tuesday">Tuesday</option>
+               <option value="Wednesday">Wednesday</option>
+               <option value="Thursday">Thursday</option>
+               <option value="Friday">Friday</option>
+               <option value="Saturday">Saturday</option>
+           </select>
+
+           <label for="event-date">Date:</label>
+           <input type="date" id="event-date" name="date" required>
+
+           <label for="event-time">Time:</label>
+           <input type="time" id="event-time" name="time" required>
+
+           <label for="event-duration">Duration:</label>
+           <select id="event-duration" name="duration">
+               <option value="20">20 minutes</option>
+               <option value="30">30 minutes</option>
+               <option value="60">1 hour</option>
+               <option value="120">2 hours</option>
+           </select>
+
+           <label for="event-notes">Notes:</label>
+           <textarea id="event-notes" name="notes" placeholder="Enter event notes..."></textarea>
+
+           <button class="button" id="save-event">Save</button>
+           <button class="button" id="close-modal">Cancel</button>
+       </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
